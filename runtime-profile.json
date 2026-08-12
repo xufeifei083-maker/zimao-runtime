@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "building",
+  "status": "validated",
   "runtimeId": "win-nvidia-h3-2026.08.2",
   "platform": "windows-x86_64",
   "gpuVendor": "nvidia",
@@ -12,22 +12,33 @@
   "pythonArchiveSha256": "4acbed6dd1c744b0376e3b1cf57ce906f9dc9e95e68824584c8099a63025a3c3",
   "comfyuiSource": "https://github.com/comfyanonymous/ComfyUI.git",
   "comfyuiCommit": "14b05228cef127ce529bc0c08660770d4af3e9a8",
+  "comfyuiMainSha256": "60b4c95ab390b189b57a06eee67578d6f48c47980e97992a2e83cd7793e26ace",
   "pytorchVersion": "2.12.1+cu130",
   "torchvisionVersion": "0.27.1+cu130",
   "torchaudioVersion": "2.11.0+cu130",
   "cudaVersion": "13.0",
+  "cudnnVersion": "92000",
+  "ffmpegVersion": "n8.1.2-34-g9b6c8969e0-20260812",
+  "ffmpegSource": "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n8.1-latest-win64-lgpl-8.1.zip",
+  "ffmpegArchiveSha256": "83ac35561c5ef5bfaf9ec28cd72b5c546c6d1b03fb422b991f45869b5a6c532f",
   "includedCustomNodes": [
     {
       "name": "comfyui-kjnodes",
       "source": "https://github.com/kijai/ComfyUI-KJNodes.git",
-      "commit": "6ab7e8130e449ed2c0037589bcf84146ceb7fc9c"
+      "commit": "6ab7e8130e449ed2c0037589bcf84146ceb7fc9c",
+      "treeSha256": "f9f9d1659ce39229debc72e4327e1f6b1fbed13a8bf291e4221cc8b200683b78"
     },
     {
       "name": "comfyui-videohelpersuite",
       "source": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git",
-      "commit": "4ee72c065db22c9d96c2427954dc69e7b908444b"
+      "commit": "4ee72c065db22c9d96c2427954dc69e7b908444b",
+      "treeSha256": "eae5288fab66099461c11644e5dfb26b447c00ae0ee2f7a4973b9f373dcd32b2"
     }
   ],
+  "fileCount": 41972,
+  "uncompressedBytes": 4568229518,
+  "archiveBytes": 2772916220,
+  "archiveSha256": "98452e559a1884e0274367304b10894eae6a0d0614a10f6e1fe32709e541ab14",
   "excludedData": ["models", "input", "output", "temp", "user"],
   "modelDistribution": "Hugging Face resources declared by signed workflow manifests"
 }

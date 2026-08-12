@@ -2,13 +2,15 @@
 
 本仓库用于公开发布紫猫固定版本的 ComfyUI、Python、PyTorch、CUDA Runtime 和 FFmpeg 运行环境清单。
 
-当前正在构建：
+当前已完成本地构建与安装验收、等待上传公开 Release：
 
 ```text
 win-nvidia-h3-2026.08.2
 ```
 
 `.2` 从官方上游全新构建，不复制任何第三方整合包文件。旧 `.1` 已撤回，原因见 [`WITHDRAWN.md`](releases/win-nvidia-h3-2026.08.1/WITHDRAWN.md)。
+
+`.2` 的签名元数据和验收记录见 [`releases/win-nvidia-h3-2026.08.2`](releases/win-nvidia-h3-2026.08.2)。在两个分卷上传并完成公开 URL 回归前，不应配置为软件下载源。
 
 ## 发布门槛
 
