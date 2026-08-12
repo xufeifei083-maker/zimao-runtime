@@ -2,43 +2,20 @@
 
 本仓库用于公开发布紫猫固定版本的 ComfyUI、Python、PyTorch、CUDA Runtime 和 FFmpeg 运行环境清单。
 
-首个 Runtime ID 预定为：
+当前正在构建：
 
 ```text
-win-nvidia-h3-2026.08.1
+win-nvidia-h3-2026.08.2
 ```
 
-Runtime 已在发布机完成压缩、分卷、整体哈希、逐分卷哈希、Ed25519 签名、Zip 完整性验证和本地端到端安装验收。GitHub Release 资产上传前仍标记为“待发布”，不能作为用户下载源。
+`.2` 从官方上游全新构建，不复制任何第三方整合包文件。旧 `.1` 已撤回，原因见 [`WITHDRAWN.md`](releases/win-nvidia-h3-2026.08.1/WITHDRAWN.md)。
 
-当前构建结果：
+## 发布门槛
 
-- 未压缩：7,287,000,293 字节，84,700 个文件；
-- 压缩后：3,849,560,045 字节；
-- 分卷：1,992,294,400 字节 + 1,857,265,645 字节；
-- 发布元数据：[`releases/win-nvidia-h3-2026.08.1`](releases/win-nvidia-h3-2026.08.1)。
-- 验收记录：[`VALIDATION.md`](releases/win-nvidia-h3-2026.08.1/VALIDATION.md)。
+- 每个源码和二进制依赖都记录官方来源、固定版本或 commit 和 SHA256；
+- 禁止旧整合包品牌、推广链接、自定义页面、启动脚本和本机路径进入产物；
+- 保留 ComfyUI 和第三方节点要求的 LICENSE/NOTICE；
+- 完成签名、分卷校验、全新目录安装和工作流启动测试后才创建公开 Release；
+- 模型不进入 Runtime，由软件从 Hugging Face 固定 commit 下载。
 
-## 发布物
-
-正式 Release 应包含：
-
-- `runtime-manifest.json`
-- `runtime-manifest.sig`
-- `checksums.sha256`
-- `runtime-<version>.partNN` 分卷
-
-Runtime 清单必须符合 [`runtime-manifest.schema.json`](runtime-manifest.schema.json)，发布步骤见 [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md)。
-
-Runtime 版本盘点见 [`runtime-profile.json`](runtime-profile.json)，Ed25519 公钥见 [`public-key.txt`](public-key.txt)。签名私钥仅保存在发布机器，不得提交。
-
-## 构建
-
-先只读检查纳入范围和预计体积：
-
-```powershell
-python tools/build_runtime.py --source <COMFYUI_ROOT> --dry-run
-```
-
-正式构建器位于 `zimao-app/tools/build_runtime.py`。它会排除模型、用户输入输出和无关自定义节点，生成 Zip64 压缩包、约 1.9 GB 分卷、SHA256 清单和 Ed25519 签名 manifest。
-
-本仓库不存放模型；工作流模型由软件从 Hugging Face 固定 commit 下载。
+Runtime 清单必须符合 [`runtime-manifest.schema.json`](runtime-manifest.schema.json)，发布步骤见 [`RELEASE-CHECKLIST.md`](RELEASE-CHECKLIST.md)，当前构建来源见 [`runtime-profile.json`](runtime-profile.json)。Ed25519 公钥见 [`public-key.txt`](public-key.txt)，私钥不得提交。
