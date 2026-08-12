@@ -1,0 +1,30 @@
+{
+  "archiveSha256": "c1f3bc4d0a72c46341db6c50cbc01f47771940fdeea7fa6b8c0071b54e9e75e3",
+  "archiveSize": 3849560045,
+  "comfyuiCommit": "14b05228cef127ce529bc0c08660770d4af3e9a8",
+  "cudaVersion": "13.0",
+  "ffmpegVersion": "2025-06-26-git-09cd38e9d5",
+  "minimumDriver": "580.00",
+  "parts": [
+    {
+      "name": "runtime-win-nvidia-h3-2026.08.1.part01",
+      "sha256": "c1a63f7086656afd377bc0995349376a1f3ffae35851b056653cd91d36f59baf",
+      "size": 1992294400,
+      "url": "https://github.com/xufeifei083-maker/zimao-runtime/releases/download/win-nvidia-h3-2026.08.1/runtime-win-nvidia-h3-2026.08.1.part01"
+    },
+    {
+      "name": "runtime-win-nvidia-h3-2026.08.1.part02",
+      "sha256": "f56f4ffd06112f3fddfbe811d769e483600010d12da105446ed71be8b963f58c",
+      "size": 1857265645,
+      "url": "https://github.com/xufeifei083-maker/zimao-runtime/releases/download/win-nvidia-h3-2026.08.1/runtime-win-nvidia-h3-2026.08.1.part02"
+    }
+  ],
+  "pythonVersion": "3.12.12",
+  "pytorchVersion": "2.12.1+cu130",
+  "requiredFiles": [
+    "main.py",
+    "walkingwithai/python.exe"
+  ],
+  "runtimeId": "win-nvidia-h3-2026.08.1",
+  "schemaVersion": 1
+}
