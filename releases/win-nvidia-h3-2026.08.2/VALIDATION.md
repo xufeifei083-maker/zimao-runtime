@@ -34,8 +34,14 @@
 - 真实安装器下载、合并、校验、安全解压和原子切换：通过
 - 安装后 Python 3.12.10 与 FFmpeg 8.1 启动：通过
 
+## 公开 Release 回归
+
+- 五个 GitHub Release 资产的服务端大小与 SHA256：通过
+- 从公开 Release URL 下载 0–100%：通过
+- 从空数据目录安装、校验、解压和原子切换：通过
+- 从公开安装目录启动 Python、FFmpeg 和 GPU ComfyUI：通过
+- H3 核心节点缺失：0
+
 ## 尚未完成
 
-- 创建 `.2` 公开 GitHub Release 并上传两个分卷；
-- 从公开 Release URL 重新执行端到端安装；
 - 在最低配置（NVIDIA 8GB 显存、16GB 内存）的全新 Windows 机器运行完整 H3 推理。

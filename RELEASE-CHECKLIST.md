@@ -11,5 +11,5 @@
 - [x] 使用生产 Ed25519 私钥签名原始 manifest 字节
 - [x] 复核私钥和测试输入未进入 Release
 - [x] 使用临时空数据目录完成下载、校验、合并、解压和原子切换
-- [ ] 创建不可变版本号的公开 GitHub Release
-- [ ] 从 Release 下载并完成一次端到端回归
+- [x] 创建不可变版本号的公开 GitHub Release
+- [x] 从 Release 下载并完成一次端到端回归
